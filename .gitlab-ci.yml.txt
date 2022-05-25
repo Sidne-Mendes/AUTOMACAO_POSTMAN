@@ -1,0 +1,12 @@
+image:
+    name: postman/newman
+    entrypoint: [ "" ]
+
+pages:
+  script:
+    - npm install -g newman-reporter-html
+    - newman run AnimeAPI.postman_collection.json -e Producao.postman_environment.json -r cli,html --reporter-html-export public/index.html
+  artifacts:
+    expire_in: 3 days
+    paths:
+      - public

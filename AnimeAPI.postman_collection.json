@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "617d8328-8d8c-4456-b352-06e56312ba24",
+		"name": "AnimeAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "NARUTO",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "{{content}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://animechan.vercel.app/api/quotes/character?name={{author}}",
+					"protocol": "https",
+					"host": [
+						"animechan",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"quotes",
+						"character"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{author}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
